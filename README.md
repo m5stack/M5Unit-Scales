@@ -1,8 +1,14 @@
-# M5Template-C-CPP
-Template for M5Stack C and CPP projects.
+# M5Unit-Scales
 
-## Steps
+## Overview
 
-1. Change [clang format check path](./.github/workflows/clang-format-check.yml#L9-L15).
-2. Add License content to [LICENSE](/LICENSE).
-3. Change this [README.md](./README.md#L1-L8).
+Contains case programs of M5Stack M5Unit-Scales
+
+## Related Link
+
+- [Document & Datasheet - M5Unit-EXTIO2](https://docs.m5stack.com/en/unit/scales)
+- [Firmware & Register](https://github.com/m5stack/M5Unit-Scales-Internal-FW)
+
+## License
+
+- [M5Unit-Scales- MIT](LICENSE)
