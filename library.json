@@ -1,7 +1,7 @@
 {
-  "name": "UNIT_SCALES",
+  "name": "M5Unit-Scales",
   "description": "Library for M5Stack M5Unit-Scales",
-  "keywords": "M5Stack M5Unit-Scales",
+  "keywords": "M5Stack Unit Scales",
   "authors": {
     "name": "M5Stack",
     "url": "http://www.m5stack.com"

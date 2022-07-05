@@ -1,21 +1,26 @@
-/**
- * @file ADDR_CONFIG.ino
- * @author Sean
- * @brief Config Scales Unit I2C Address
- * @version 0.1
- * @date 2022-06-01
- * 
- * @copyright Copyright (c) 2022
- * 
- */
+/*
+*******************************************************************************
+* Copyright (c) 2022 by M5Stack
+*                  Equipped with M5Core sample source code
+*                          配套 M5Core 示例源代码
+*
+* Visit for more information: https://docs.m5stack.com/en/unit/scales
+* 获取更多资料请访问: https://docs.m5stack.com/zh_CN/unit/scales
+*
+* Product: Unit Scales.
+* Date: 2022/7/5
+*******************************************************************************
+  Config Scales Unit I2C Address
+  配置Scales Unit I2C 地址
+*/
 
 #include <M5Stack.h>
 #include <M5GFX.h>
-#include "UNIT_SCALES.h"
+#include "M5_SCALES.h"
 
 M5GFX display;
 M5Canvas canvas(&display);
-UNIT_SCALES scales;
+M5_SCALES scales;
 
 void setup() {
     M5.begin();
@@ -25,7 +30,7 @@ void setup() {
     canvas.createSprite(display.width(), display.height());
     canvas.setTextSize(1);
     canvas.setPaletteColor(1, ORANGE);
-    while (!scales.begin(&Wire, 21, 22, UNIT_SCALES_DEFAULT_ADDR)) {
+    while (!scales.begin(&Wire, 21, 22, M5_SCALES_DEFAULT_ADDR)) {
         Serial.println("scales connect error");
         M5.Lcd.print("scales connect error");
         delay(1000);
