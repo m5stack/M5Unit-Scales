@@ -16,11 +16,11 @@
 
 #include <M5Stack.h>
 #include <M5GFX.h>
-#include "M5_SCALES.h"
+#include "M5_Scales.h"
 
 M5GFX display;
 M5Canvas canvas(&display);
-M5_SCALES scales;
+M5_Scales scales;
 
 void setup() {
     M5.begin();
@@ -71,9 +71,15 @@ void loop() {
     canvas.drawString("LED COLOR: 0x" + String(scales.getLEDColor(), HEX), 10,
                       160);
 
-    canvas.drawString("SCALES GAIN: " + String(scales.getScale()), 10, 185);
+    if (LEDSync) {
+        canvas.drawString("LED Sync ON", 10, 210);
+    } else {
+        canvas.drawString("LED Sync OFF", 10, 210);
+    }
 
-    canvas.drawString("FW VERSION: " + String(scales.getVersion()), 10, 210);
+    canvas.drawString("Set Offset", 120, 210);
+
+    canvas.drawString("Switch Color", 220, 210);
 
     canvas.pushSprite(0, 0);
 

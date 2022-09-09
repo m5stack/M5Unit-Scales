@@ -16,11 +16,11 @@
 
 #include <M5Stack.h>
 #include <M5GFX.h>
-#include "M5_SCALES.h"
+#include "M5_Scales.h"
 
 M5GFX display;
 M5Canvas canvas(&display);
-M5_SCALES scales;
+M5_Scales scales;
 
 void setup() {
     M5.begin();
