@@ -5,7 +5,7 @@ bool M5_Scales::begin(TwoWire *wire, uint8_t sda, uint8_t scl, uint8_t addr) {
     _addr = addr;
     _sda  = sda;
     _scl  = scl;
-    _wire->begin(_sda, _scl, 400000UL);
+    _wire->begin((int)_sda, (int)_scl, 400000UL);
     delay(10);
     _wire->beginTransmission(_addr);
     uint8_t error = _wire->endTransmission();
